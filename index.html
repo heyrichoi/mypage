@@ -85,6 +85,17 @@
             background: linear-gradient(135deg, #facc15 0%, #fbbf24 100%); /* yellow-400 to amber-400 */
         }
 
+        /* New: Custom gradient for treasure archive card borders */
+        .treasure-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(135deg, #f472b6 0%, #fb7185 100%); /* pink-400 to rose-400 */
+        }
+
 
         /* Special pulse effect for latest projects */
         @keyframes pulse-effect {
@@ -191,18 +202,23 @@
                             인터랙티브 게임
                         </a>
                     </li>
-                    <!-- New: 미완성 프로젝트 (Unfinished Projects) Navigation Item -->
-                    <li class="nav-item mb-3">
-                        <a href="#unfinished-projects" class="nav-link flex items-center p-2.5 bg-gray-100 bg-opacity-70 rounded-xl text-gray-700 text-sm font-medium transition-all duration-300 hover:bg-gray-200 hover:translate-x-1">
-                            <span class="nav-icon w-5 h-5 mr-2.5 rounded-md flex items-center justify-center text-base text-white bg-gradient-to-br from-emerald-400 to-cyan-400">🚧</span>
-                            미완성 프로젝트
-                        </a>
-                    </li>
-                    <!-- New: 편의성 툴 (Convenience Tools) Navigation Item -->
                     <li class="nav-item mb-3">
                         <a href="#convenience-tools" class="nav-link flex items-center p-2.5 bg-gray-100 bg-opacity-70 rounded-xl text-gray-700 text-sm font-medium transition-all duration-300 hover:bg-gray-200 hover:translate-x-1">
                             <span class="nav-icon w-5 h-5 mr-2.5 rounded-md flex items-center justify-center text-base text-white bg-gradient-to-br from-yellow-400 to-amber-400">🛠️</span>
                             편의성 툴
+                        </a>
+                    </li>
+                    <!-- New: 보물창고 Navigation Item -->
+                    <li class="nav-item mb-3">
+                        <a href="#treasure-archive" class="nav-link flex items-center p-2.5 bg-gray-100 bg-opacity-70 rounded-xl text-gray-700 text-sm font-medium transition-all duration-300 hover:bg-gray-200 hover:translate-x-1">
+                            <span class="nav-icon w-5 h-5 mr-2.5 rounded-md flex items-center justify-center text-base text-white bg-gradient-to-br from-rose-400 to-pink-400">💎</span>
+                            보물창고
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a href="#unfinished-projects" class="nav-link flex items-center p-2.5 bg-gray-100 bg-opacity-70 rounded-xl text-gray-700 text-sm font-medium transition-all duration-300 hover:bg-gray-200 hover:translate-x-1">
+                            <span class="nav-icon w-5 h-5 mr-2.5 rounded-md flex items-center justify-center text-base text-white bg-gradient-to-br from-emerald-400 to-cyan-400">🚧</span>
+                            미완성 프로젝트
                         </a>
                     </li>
                 </ul>
@@ -210,7 +226,6 @@
         </aside>
 
         <!-- 메인 콘텐츠 -->
-        <!-- Main content no longer needs ml-72 as sidebar is not fixed -->
         <main class="main-content flex-1 p-6 lg:p-8 bg-white bg-opacity-50 backdrop-blur-md">
             <!-- 최신 프로젝트 섹션 -->
             <section id="latest-projects" class="section mb-14 scroll-mt-4">
@@ -220,13 +235,33 @@
                 </div>
                 <div class="latest-projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     
-                    <!-- JJ랜드 룰렛 (최신 프로젝트 교체) -->
+                    <!-- JJ랜드 룰렛 -->
                     <div class="relative bg-white rounded-3xl p-8 shadow-xl transition-all duration-400 transform hover:-translate-y-3 text-center border border-gray-100 overflow-hidden animate-pulse-effect">
-                        <div class="latest-project-card-light"></div> <!-- Moving light effect element -->
+                        <div class="latest-project-card-light"></div>
                         <img src="https://github.com/heyrichoi/JJland/blob/main/%EB%A3%B0%EB%A0%9B%20%EB%A1%9C%EA%B3%A0.png?raw=true" alt="JJ랜드 룰렛" class="w-40 h-40 mx-auto mb-6 rounded-2xl object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/160x160/e0e0e0/333333?text=JJLand';">
                         <div class="text-lg font-bold text-gray-900 mb-6">JJ랜드 룰렛</div>
                         <div class="flex flex-col gap-4">
                             <a href="https://heyrichoi.github.io/JJland/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-full py-3 px-6 text-base font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">바로가기</a>
+                        </div>
+                    </div>
+
+                    <!-- 쫀지 플레이그라운드 -->
+                    <div class="relative bg-white rounded-3xl p-8 shadow-xl transition-all duration-400 transform hover:-translate-y-3 text-center border border-gray-100 overflow-hidden animate-pulse-effect">
+                        <div class="latest-project-card-light"></div>
+                        <img src="https://imgur.com/cVpyzcL.jpg" alt="쫀지 플레이그라운드" class="w-40 h-40 mx-auto mb-6 rounded-2xl object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/160x160/e0e0e0/333333?text=JJmoa';">
+                        <div class="text-lg font-bold text-gray-900 mb-6">쫀지 플레이그라운드</div>
+                        <div class="flex flex-col gap-4">
+                            <a href="https://heyrichoi.github.io/JJmoa/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-full py-3 px-6 text-base font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">바로가기</a>
+                        </div>
+                    </div>
+
+                    <!-- 인기 도네 룰렛 -->
+                    <div class="relative bg-white rounded-3xl p-8 shadow-xl transition-all duration-400 transform hover:-translate-y-3 text-center border border-gray-100 overflow-hidden animate-pulse-effect">
+                        <div class="latest-project-card-light"></div>
+                        <img src="https://imgur.com/dlqL5Uo.png" alt="인기 도네 룰렛" class="w-40 h-40 mx-auto mb-6 rounded-2xl object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/160x160/e0e0e0/333333?text=Donation';">
+                        <div class="text-lg font-bold text-gray-900 mb-6">인기 도네 룰렛</div>
+                        <div class="flex flex-col gap-4">
+                            <a href="https://heyrichoi.github.io/ingi/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-full py-3 px-6 text-base font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">바로가기</a>
                         </div>
                     </div>
                 </div>
@@ -299,7 +334,7 @@
                     <h2 class="text-3xl font-extrabold text-center lg:text-left drop-shadow-md">인터랙티브 게임</h2>
                 </div>
                 <div class="games-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- 금단의 유혹 : 마녀의 밤 (미완성 프로젝트에서 이동) -->
+                    <!-- 금단의 유혹 : 마녀의 밤 -->
                     <div class="game-card relative bg-white rounded-3xl p-7 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-2 text-center border border-gray-100 overflow-hidden">
                         <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-br from-red-400 to-orange-400"></div>
                         <img src="https://imgur.com/QCK9Z1B.jpg" alt="금단의 유혹 : 마녀의 밤" class="game-logo w-24 h-24 mx-auto mb-5 rounded-2xl object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/96x96/e0e0e0/333333?text=Witch';">
@@ -309,7 +344,16 @@
                             <a href="#" onclick="showPasswordModal('https://heyrichoi.github.io/witchmain/', '0127'); return false;" class="bg-white border-2 border-red-400 text-red-600 rounded-xl py-2.5 px-4 text-sm font-semibold transition-all duration-300 shadow-sm hover:shadow-md hover:bg-red-50 hover:text-red-700">공략집</a>
                         </div>
                     </div>
-                    <!-- 카제로스 시뮬레이터 (추가) -->
+                    <!-- 황금토끼 타로카드 -->
+                    <div class="game-card relative bg-white rounded-3xl p-7 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-2 text-center border border-gray-100 overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-br from-red-400 to-orange-400"></div>
+                        <img src="https://imgur.com/0zgI4WX.jpg" alt="황금토끼 타로카드" class="game-logo w-24 h-24 mx-auto mb-5 rounded-2xl object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/96x96/e0e0e0/333333?text=Tarot';">
+                        <div class="text-base font-bold text-gray-900 mb-5">황금토끼 타로카드</div>
+                        <div class="flex flex-col gap-3">
+                            <a href="https://heyrichoi.github.io/JJtarot/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-br from-red-400 to-orange-400 rounded-xl py-2.5 px-4 text-white text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:translate-y-[-1.5px]">🎮 점치기</a>
+                        </div>
+                    </div>
+                    <!-- 카제로스 시뮬레이터 -->
                     <div class="game-card relative bg-white rounded-3xl p-7 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-2 text-center border border-gray-100 overflow-hidden">
                         <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-br from-red-400 to-orange-400"></div>
                         <img src="https://imgur.com/2CnlLrA.png" alt="카제로스 시뮬레이터" class="game-logo w-24 h-24 mx-auto mb-5 rounded-2xl object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/96x96/e0e0e0/333333?text=Kaze';">
@@ -318,7 +362,7 @@
                             <a href="https://heyrichoi.github.io/JJ_2/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-br from-red-400 to-orange-400 rounded-xl py-2.5 px-4 text-white text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:translate-y-[-1.5px]">🎮 플레이하기</a>
                         </div>
                     </div>
-                    <!-- 카제로스 레이드 정복 (추가) -->
+                    <!-- 카제로스 레이드 정복 -->
                     <div class="game-card relative bg-white rounded-3xl p-7 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-2 text-center border border-gray-100 overflow-hidden">
                         <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-br from-red-400 to-orange-400"></div>
                         <img src="https://imgur.com/C8zFD93.png" alt="카제로스 레이드 정복" class="game-logo w-24 h-24 mx-auto mb-5 rounded-2xl object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/96x96/e0e0e0/333333?text=Raid';">
@@ -327,16 +371,7 @@
                             <a href="https://heyrichoi.github.io/JJ/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-br from-red-400 to-orange-400 rounded-xl py-2.5 px-4 text-white text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:translate-y-[-1.5px]">🎮 플레이하기</a>
                         </div>
                     </div>
-                    <!-- 조도현의 직장 대모험 -->
-                    <div class="game-card relative bg-white rounded-3xl p-7 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-2 text-center border border-gray-100 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-br from-red-400 to-orange-400"></div>
-                        <img src="https://imgur.com/5Bkd3IN.jpg" alt="조도현의 직장 대모험" class="game-logo w-24 h-24 mx-auto mb-5 rounded-2xl object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/96x96/e0e0e0/333333?text=Game1';">
-                        <div class="text-base font-bold text-gray-900 mb-5">조도현의 직장 대모험</div>
-                        <div class="flex flex-col gap-3">
-                            <a href="https://claude.ai/public/artifacts/f73eb588-c0dc-48fa-9f24-2f8eb5942acd" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-br from-red-400 to-orange-400 rounded-xl py-2.5 px-4 text-white text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:translate-y-[-1.5px]">🎮 플레이하기</a>
-                        </div>
-                    </div>
-                    
+                    <!-- 안재경의 자수성가 스토리 -->
                     <div class="game-card relative bg-white rounded-3xl p-7 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-2 text-center border border-gray-100 overflow-hidden">
                         <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-br from-red-400 to-orange-400"></div>
                         <img src="https://imgur.com/Ocn9v5Q.jpg" alt="안재경의 자수성가 스토리" class="game-logo w-24 h-24 mx-auto mb-5 rounded-2xl object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/96x96/e0e0e0/333333?text=Game2';">
@@ -345,37 +380,102 @@
                             <a href="https://heyrichoi.github.io/JK/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-br from-red-400 to-orange-400 rounded-xl py-2.5 px-4 text-white text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:translate-y-[-1.5px]">🎮 플레이하기</a>
                         </div>
                     </div>
-                    
-                    <!-- 프래빗 오피스 서바이벌 로고 이미지 URL 수정 -->
-                    <div class="game-card relative bg-white rounded-3xl p-7 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-2 text-center border border-gray-100 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-br from-red-400 to-orange-400"></div>
-                        <img src="https://imgur.com/Nuowit2.jpg" alt="프래빗 오피스 서바이벌" class="game-logo w-24 h-24 mx-auto mb-5 rounded-2xl object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/96x96/e0e0e0/333333?text=POS';">
-                        <div class="text-base font-bold text-gray-900 mb-5">프래빗 오피스 서바이벌</div>
+                </div>
+            </section>
+
+            <!-- 편의성 툴 섹션 -->
+            <section id="convenience-tools" class="section convenience-tools-section mb-14 scroll-mt-4">
+                <div class="section-header flex flex-col lg:flex-row items-center mb-7 p-5 bg-gradient-to-br from-yellow-400 to-amber-400 rounded-2xl text-white shadow-xl">
+                    <span class="section-logo w-16 h-16 mr-0 lg:mr-4 mb-3 lg:mb-0 rounded-xl flex items-center justify-center text-4xl text-white bg-gradient-to-br from-yellow-400 to-amber-400 border-3 border-white border-opacity-30">🛠️</span>
+                    <h2 class="text-3xl font-extrabold text-center lg:text-left drop-shadow-md">편의성 툴</h2>
+                </div>
+                <div class="convenience-tools-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- 인기 도네 룰렛 (추가) -->
+                    <a href="https://heyrichoi.github.io/ingi/" target="_blank" rel="noopener noreferrer" class="convenience-tool-card relative block bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-1.5 border border-gray-100 overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-br from-yellow-400 to-amber-400"></div>
+                        <img src="https://imgur.com/dlqL5Uo.png" alt="인기 도네 룰렛" class="nav-icon w-16 h-16 mx-auto mb-3 rounded-md object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/e0e0e0/333333?text=Donation';">
+                        <div class="text-sm font-semibold text-gray-900 leading-snug text-center">인기 도네 룰렛</div>
+                    </a>
+                    <!-- 모코 카카오톡 분석기 -->
+                    <a href="https://heyrichoi.github.io/mocokakao/" target="_blank" rel="noopener noreferrer" class="convenience-tool-card relative block bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-1.5 border border-gray-100 overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-br from-yellow-400 to-amber-400"></div>
+                        <img src="https://imgur.com/RgreP2U.png" alt="모코 카카오톡 분석기" class="nav-icon w-16 h-16 mx-auto mb-3 rounded-md object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/e0e0e0/333333?text=Moco';">
+                        <div class="text-sm font-semibold text-gray-900 leading-snug text-center">모코 카카오톡 분석기</div>
+                    </a>
+                    <!-- JJ랜드 룰렛 -->
+                    <a href="https://heyrichoi.github.io/JJland/" target="_blank" rel="noopener noreferrer" class="convenience-tool-card relative block bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-1.5 border border-gray-100 overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-br from-yellow-400 to-amber-400"></div>
+                        <img src="https://github.com/heyrichoi/JJland/blob/main/%EB%A3%B0%EB%A0%9B%20%EB%A1%9C%EA%B3%A0.png?raw=true" alt="JJ랜드 룰렛" class="nav-icon w-16 h-16 mx-auto mb-3 rounded-md object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/e0e0e0/333333?text=JJLand';">
+                        <div class="text-sm font-semibold text-gray-900 leading-snug text-center">JJ랜드 룰렛</div>
+                    </a>
+                    <!-- 전분 계산기 -->
+                    <a href="https://heyrichoi.github.io/mozzi/" target="_blank" rel="noopener noreferrer" class="convenience-tool-card relative block bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-1.5 border border-gray-100 overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-br from-yellow-400 to-amber-400"></div>
+                        <img src="https://i.imgur.com/5sjUCyF.jpg" alt="전분 계산기" class="nav-icon w-16 h-16 mx-auto mb-3 rounded-md object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/e0e0e0/333333?text=Tool';">
+                        <div class="text-sm font-semibold text-gray-900 leading-snug text-center">전분 계산기</div>
+                    </a>
+                    <!-- 월간 커뮤니티 리뷰 자동화 -->
+                    <a href="https://heyrichoi.github.io/review/" target="_blank" rel="noopener noreferrer" class="convenience-tool-card relative block bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-1.5 border border-gray-100 overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-br from-yellow-400 to-amber-400"></div>
+                        <img src="https://imgur.com/oYfoboj.jpg" alt="월간 커뮤니티 리뷰 자동화" class="nav-icon w-16 h-16 mx-auto mb-3 rounded-md object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/e0e0e0/333333?text=Review';">
+                        <div class="text-sm font-semibold text-gray-900 leading-snug text-center">월간 커뮤니티 리뷰 자동화</div>
+                    </a>
+                    <!-- 카피 생성기 -->
+                    <a href="https://heyrichoi.github.io/make/" target="_blank" rel="noopener noreferrer" class="convenience-tool-card relative block bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-1.5 border border-gray-100 overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-br from-yellow-400 to-amber-400"></div>
+                        <img src="https://imgur.com/IErGwby.jpg" alt="카피 생성기" class="nav-icon w-16 h-16 mx-auto mb-3 rounded-md object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/e0e0e0/333333?text=Copy';">
+                        <div class="text-sm font-semibold text-gray-900 leading-snug text-center">카피 생성기</div>
+                    </a>
+                    <!-- 유튜브 크리에이터 도구 -->
+                    <a href="https://heyrichoi.github.io/youtube/" target="_blank" rel="noopener noreferrer" class="convenience-tool-card relative block bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-1.5 border border-gray-100 overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-br from-yellow-400 to-amber-400"></div>
+                        <img src="https://imgur.com/FuZHcn2.jpg" alt="유튜브 크리에이터 도구" class="nav-icon w-16 h-16 mx-auto mb-3 rounded-md object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/e0e0e0/333333?text=YouTube';">
+                        <div class="text-sm font-semibold text-gray-900 leading-snug text-center">유튜브 크리에이터 도구</div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 보물창고 섹션 -->
+            <section id="treasure-archive" class="section treasure-archive-section mb-14 scroll-mt-4">
+                <div class="section-header flex flex-col lg:flex-row items-center mb-7 p-5 bg-gradient-to-br from-rose-400 to-pink-400 rounded-2xl text-white shadow-xl">
+                    <span class="section-logo w-16 h-16 mr-0 lg:mr-4 mb-3 lg:mb-0 rounded-xl flex items-center justify-center text-4xl text-white bg-gradient-to-br from-rose-400 to-pink-400 border-3 border-white border-opacity-30">💎</span>
+                    <h2 class="text-3xl font-extrabold text-center lg:text-left drop-shadow-md">보물창고 (다운로드)</h2>
+                </div>
+                <div class="treasure-archive-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="treasure-card relative bg-white rounded-3xl p-7 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-2 text-center border border-gray-100 overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-br from-rose-400 to-pink-400"></div>
+                        <img src="https://imgur.com/atBwVFS.jpg" alt="황금동산 배경화면" class="game-logo w-full h-32 mx-auto mb-5 rounded-xl object-cover shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/200x128/e0e0e0/333333?text=Wallpaper';">
+                        <div class="text-base font-bold text-gray-900 mb-5">황금동산 배경화면</div>
                         <div class="flex flex-col gap-3">
-                            <a href="https://heyrichoi.github.io/pos/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-br from-red-400 to-orange-400 rounded-xl py-2.5 px-4 text-white text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:translate-y-[-1.5px]">🎮 플레이하기</a>
+                            <a href="https://drive.google.com/drive/folders/1jN0gUiC0_NgzF8WeN8QUX-CTzEbS6Djc?usp=sharing" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-br from-rose-400 to-pink-500 rounded-xl py-2.5 px-4 text-white text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:translate-y-[-1.5px]">💾 다운로드</a>
                         </div>
                     </div>
-
-                    <div class="game-card relative bg-white rounded-3xl p-7 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-2 text-center border border-gray-100 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-br from-red-400 to-orange-400"></div>
-                        <img src="https://imgur.com/gEjmUvB.jpg" alt="프래빗 연애 시뮬레이션" class="game-logo w-24 h-24 mx-auto mb-5 rounded-2xl object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/96x96/e0e0e0/333333?text=Game3';">
-                        <div class="text-base font-bold text-gray-900 mb-5">프래빗 연애 시뮬레이션</div>
+                    <div class="treasure-card relative bg-white rounded-3xl p-7 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-2 text-center border border-gray-100 overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-br from-rose-400 to-pink-400"></div>
+                        <img src="https://imgur.com/8LxO2Tk.jpg" alt="악마 쫀지 배경화면" class="game-logo w-full h-32 mx-auto mb-5 rounded-xl object-cover shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/200x128/e0e0e0/333333?text=Devil';">
+                        <div class="text-base font-bold text-gray-900 mb-5">타로 : 악마 쫀지 배경화면</div>
                         <div class="flex flex-col gap-3">
-                            <a href="https://heyrichoi.github.io/love/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-br from-red-400 to-orange-400 rounded-xl py-2.5 px-4 text-white text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:translate-y-[-1.5px]">💕 플레이하기</a>
-                            <a href="https://heyrichoi.github.io/loveg/" target="_blank" rel="noopener noreferrer" class="game-link bg-gradient-to-br from-red-400 to-orange-400 rounded-xl py-2.5 px-4 text-white text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:translate-y-[-1.5px]">📖 공략집</a>
+                            <a href="https://drive.google.com/drive/folders/1Gykx1sNDWiHGcRa8WbDPnLaVerrAtOgp?usp=sharing" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-br from-rose-400 to-pink-500 rounded-xl py-2.5 px-4 text-white text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:translate-y-[-1.5px]">💾 다운로드</a>
+                        </div>
+                    </div>
+                    <div class="treasure-card relative bg-white rounded-3xl p-7 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-2 text-center border border-gray-100 overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-br from-rose-400 to-pink-400"></div>
+                        <img src="https://imgur.com/w8jzdn5.jpg" alt="별 쫀지 배경화면" class="game-logo w-full h-32 mx-auto mb-5 rounded-xl object-cover shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/200x128/e0e0e0/333333?text=Star';">
+                        <div class="text-base font-bold text-gray-900 mb-5">타로 : 별 쫀지 배경화면</div>
+                        <div class="flex flex-col gap-3">
+                            <a href="https://drive.google.com/drive/folders/1079RXG7gboqMFMLUqDow22JIIinsTUHN?usp=sharing" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-br from-rose-400 to-pink-500 rounded-xl py-2.5 px-4 text-white text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:translate-y-[-1.5px]">💾 다운로드</a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- New: 미완성 프로젝트 섹션 -->
+            <!-- 미완성 프로젝트 섹션 -->
             <section id="unfinished-projects" class="section unfinished-projects-section mb-14 scroll-mt-4">
                 <div class="section-header flex flex-col lg:flex-row items-center mb-7 p-5 bg-gradient-to-br from-emerald-400 to-cyan-400 rounded-2xl text-white shadow-xl">
                     <span class="section-logo w-16 h-16 mr-0 lg:mr-4 mb-3 lg:mb-0 rounded-xl flex items-center justify-center text-4xl text-white bg-gradient-to-br from-emerald-400 to-cyan-400 border-3 border-white border-opacity-30">🚧</span>
                     <h2 class="text-3xl font-extrabold text-center lg:text-left drop-shadow-md">미완성 프로젝트</h2>
                 </div>
                 <div class="unfinished-projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- 유나 주식 게임 -->
                     <div class="unfinished-project-card relative bg-white rounded-3xl p-7 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-2 text-center border border-gray-100 overflow-hidden">
                         <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-br from-emerald-400 to-cyan-400"></div>
                         <img src="https://imgur.com/Omc3nbn.jpg" alt="유나 주식 게임" class="game-logo w-24 h-24 mx-auto mb-5 rounded-2xl object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/96x96/e0e0e0/333333?text=Yuna';">
@@ -384,7 +484,6 @@
                             <a href="https://heyrichoi.github.io/yuna/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-br from-emerald-400 to-cyan-400 rounded-xl py-2.5 px-4 text-white text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:translate-y-[-1.5px]">시작</a>
                         </div>
                     </div>
-                    <!-- 에겐녀? 테토녀 -->
                     <div class="unfinished-project-card relative bg-white rounded-3xl p-7 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-2 text-center border border-gray-100 overflow-hidden">
                         <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-br from-emerald-400 to-cyan-400"></div>
                         <img src="https://imgur.com/dahh1jr.jpg" alt="에겐녀? 테토녀" class="game-logo w-24 h-24 mx-auto mb-5 rounded-2xl object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/96x96/e0e0e0/333333?text=AT';">
@@ -393,56 +492,8 @@
                             <a href="https://heyrichoi.github.io/at/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-br from-emerald-400 to-cyan-400 rounded-xl py-2.5 px-4 text-white text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:translate-y-[-1.5px]">시작</a>
                         </div>
                     </div>
-                    <!-- 금단의 유혹 : 마녀의 밤 카드는 게임 섹션으로 이동됨 -->
                 </div>
             </section>
-
-            <!-- New: 편의성 툴 섹션 -->
-            <section id="convenience-tools" class="section convenience-tools-section mb-14 scroll-mt-4">
-                <div class="section-header flex flex-col lg:flex-row items-center mb-7 p-5 bg-gradient-to-br from-yellow-400 to-amber-400 rounded-2xl text-white shadow-xl">
-                    <span class="section-logo w-16 h-16 mr-0 lg:mr-4 mb-3 lg:mb-0 rounded-xl flex items-center justify-center text-4xl text-white bg-gradient-to-br from-yellow-400 to-amber-400 border-3 border-white border-opacity-30">🛠️</span>
-                    <h2 class="text-3xl font-extrabold text-center lg:text-left drop-shadow-md">편의성 툴</h2>
-                </div>
-                <div class="convenience-tools-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <!-- 모코 카카오톡 분석기 (추가) -->
-                    <a href="https://heyrichoi.github.io/mocokakao/" target="_blank" rel="noopener noreferrer" class="convenience-tool-card relative block bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-1.5 border border-gray-100 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-br from-yellow-400 to-amber-400"></div>
-                        <img src="https://imgur.com/RgreP2U.png" alt="모코 카카오톡 분석기" class="nav-icon w-16 h-16 mx-auto mb-3 rounded-md object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/e0e0e0/333333?text=Moco';">
-                        <div class="text-sm font-semibold text-gray-900 leading-snug">모코 카카오톡 분석기</div>
-                    </a>
-                    <!-- JJ랜드 룰렛 (추가) -->
-                    <a href="https://heyrichoi.github.io/JJland/" target="_blank" rel="noopener noreferrer" class="convenience-tool-card relative block bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-1.5 border border-gray-100 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-br from-yellow-400 to-amber-400"></div>
-                        <img src="https://github.com/heyrichoi/JJland/blob/main/%EB%A3%B0%EB%A0%9B%20%EB%A1%9C%EA%B3%A0.png?raw=true" alt="JJ랜드 룰렛" class="nav-icon w-16 h-16 mx-auto mb-3 rounded-md object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/e0e0e0/333333?text=JJLand';">
-                        <div class="text-sm font-semibold text-gray-900 leading-snug">JJ랜드 룰렛</div>
-                    </a>
-                    <!-- 전분 계산기 (이전 '모찌') -->
-                    <a href="https://heyrichoi.github.io/mozzi/" target="_blank" rel="noopener noreferrer" class="convenience-tool-card relative block bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-1.5 border border-gray-100 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-br from-yellow-400 to-amber-400"></div>
-                        <img src="https://i.imgur.com/5sjUCyF.jpg" alt="전분 계산기" class="nav-icon w-16 h-16 mx-auto mb-3 rounded-md object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/e0e0e0/333333?text=Tool';">
-                        <div class="text-sm font-semibold text-gray-900 leading-snug">전분 계산기</div>
-                    </a>
-                    <!-- 월간 커뮤니티 리뷰 자동화 (편의성 툴) -->
-                    <a href="https://heyrichoi.github.io/review/" target="_blank" rel="noopener noreferrer" class="convenience-tool-card relative block bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-1.5 border border-gray-100 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-br from-yellow-400 to-amber-400"></div>
-                        <img src="https://imgur.com/oYfoboj.jpg" alt="월간 커뮤니티 리뷰 자동화" class="nav-icon w-16 h-16 mx-auto mb-3 rounded-md object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/e0e0e0/333333?text=Review';">
-                        <div class="text-sm font-semibold text-gray-900 leading-snug">월간 커뮤니티 리뷰 자동화</div>
-                    </a>
-                    <!-- 카피 생성기 (편의성 툴) -->
-                    <a href="https://heyrichoi.github.io/make/" target="_blank" rel="noopener noreferrer" class="convenience-tool-card relative block bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-1.5 border border-gray-100 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-br from-yellow-400 to-amber-400"></div>
-                        <img src="https://imgur.com/IErGwby.jpg" alt="카피 생성기" class="nav-icon w-16 h-16 mx-auto mb-3 rounded-md object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/e0e0e0/333333?text=Copy';">
-                        <div class="text-sm font-semibold text-gray-900 leading-snug">카피 생성기</div>
-                    </a>
-                    <!-- 유튜브 크리에이터 도구 (편의성 툴) -->
-                    <a href="https://heyrichoi.github.io/youtube/" target="_blank" rel="noopener noreferrer" class="convenience-tool-card relative block bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-400 transform hover:-translate-y-1.5 border border-gray-100 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-br from-yellow-400 to-amber-400"></div>
-                        <img src="https://imgur.com/FuZHcn2.jpg" alt="유튜브 크리에이터 도구" class="nav-icon w-16 h-16 mx-auto mb-3 rounded-md object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/e0e0e0/333333?text=YouTube';">
-                        <div class="text-sm font-semibold text-gray-900 leading-snug">유튜브 크리에이터 도구</div>
-                    </a>
-                </div>
-            </section>
-
         </main>
     </div>
 
@@ -461,7 +512,6 @@
     </div>
 
     <script>
-        // Get modal elements
         const passwordModal = document.getElementById('passwordModal');
         const passwordInput = document.getElementById('passwordInput');
         const passwordError = document.getElementById('passwordError');
@@ -471,44 +521,33 @@
         let currentTargetUrl = '';
         let currentCorrectPassword = '';
 
-        /**
-         * Shows the custom password modal.
-         * @param {string} url - The URL to navigate to if the password is correct.
-         * @param {string} correctPassword - The correct password for access.
-         */
         function showPasswordModal(url, correctPassword) {
             currentTargetUrl = url;
             currentCorrectPassword = correctPassword;
-            passwordInput.value = ''; // Clear input field
-            passwordError.classList.add('hidden'); // Hide error message
-            passwordModal.classList.add('show'); // Show the modal
-            passwordInput.focus(); // Focus on the input field
+            passwordInput.value = '';
+            passwordError.classList.add('hidden');
+            passwordModal.classList.add('show');
+            passwordInput.focus();
         }
 
-        /**
-         * Hides the custom password modal.
-         */
         function hidePasswordModal() {
-            passwordModal.classList.remove('show'); // Hide the modal
+            passwordModal.classList.remove('show');
         }
 
-        // Event listener for the confirm button
         confirmPasswordBtn.addEventListener('click', () => {
             const enteredPassword = passwordInput.value;
             if (enteredPassword === currentCorrectPassword) {
-                window.open(currentTargetUrl, '_blank', 'noopener noreferrer'); // Open in new tab
+                window.open(currentTargetUrl, '_blank', 'noopener noreferrer');
                 hidePasswordModal();
             } else {
-                passwordError.classList.remove('hidden'); // Show error message
+                passwordError.classList.remove('hidden');
             }
         });
 
-        // Event listener for the cancel button
         cancelPasswordBtn.addEventListener('click', () => {
-            hidePasswordModal(); // Hide the modal
+            hidePasswordModal();
         });
 
-        // Allow pressing Enter key to confirm password
         passwordInput.addEventListener('keypress', (event) => {
             if (event.key === 'Enter') {
                 confirmPasswordBtn.click();
